@@ -236,7 +236,7 @@ static void
 parse_fwd_coremask(const char *coremask)
 {
 	char *end;
-	unsigned long long int cm;
+	uint64_t cm;
 
 	/* parse hexadecimal string */
 	end = NULL;
@@ -255,7 +255,7 @@ static void
 parse_fwd_portmask(const char *portmask)
 {
 	char *end;
-	unsigned long long int pm;
+	uint64_t pm;
 
 	/* parse hexadecimal string */
 	end = NULL;

@@ -164,7 +164,7 @@ test_hash_scaling(int locking_mode)
 	rte_eal_mp_remote_launch(test_hash_scaling_worker, NULL, CALL_MASTER);
 	rte_eal_mp_wait_lcore();
 
-	unsigned long long int cycles_per_operation =
+	uint64_t cycles_per_operation =
 		rte_atomic64_read(&gcycles)/
 		(tbl_scaling_test_params.num_iterations*rte_lcore_count());
 	const char *lock_name;
