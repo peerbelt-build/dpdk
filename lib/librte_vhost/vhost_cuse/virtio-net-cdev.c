@@ -257,7 +257,7 @@ host_memory_map(pid_t pid, uint64_t addr,
 	LOG_DEBUG(VHOST_CONFIG,
 		"Mem File: %s->%s - Size: %llu - VA: %p\n",
 		memfile, resolved_path,
-		(unsigned long long)*mapped_size, map);
+		(uint64_t)*mapped_size, map);
 
 	return 0;
 }

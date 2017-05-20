@@ -91,8 +91,8 @@
 typedef		unsigned char       u8;
 typedef		unsigned short      u16;
 typedef		unsigned int        u32;
-typedef         unsigned long long  u64;
-typedef         unsigned long long  dma_addr_t;
+typedef         uint64_t  u64;
+typedef         uint64_t  dma_addr_t;
 
 static inline uint32_t ioread32(volatile void *addr)
 {

@@ -353,7 +353,7 @@ rte_xen_dom0_memory_attach(void)
 		if (vir_addr == MAP_FAILED) {
 			RTE_LOG(ERR, EAL, "Could not mmap %llu bytes "
 				"in %s to requested address [%p]\n",
-				(unsigned long long)mcfg->memseg[s].len, DOM0_MM_DEV,
+				(uint64_t)mcfg->memseg[s].len, DOM0_MM_DEV,
 				mcfg->memseg[s].addr);
 			goto error;
 		}

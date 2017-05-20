@@ -1469,7 +1469,7 @@ rte_eal_hugepage_attach(void)
 		    base_addr != mcfg->memseg[s].addr) {
 			RTE_LOG(ERR, EAL, "Could not mmap %llu bytes "
 				"in /dev/zero to requested address [%p]: '%s'\n",
-				(unsigned long long)mcfg->memseg[s].len,
+				(uint64_t)mcfg->memseg[s].len,
 				mcfg->memseg[s].addr, strerror(errno));
 			if (aslr_enabled() > 0) {
 				RTE_LOG(ERR, EAL, "It is recommended to "
@@ -1543,7 +1543,7 @@ rte_eal_hugepage_attach(void)
 			}
 		}
 		RTE_LOG(DEBUG, EAL, "Mapped segment %u of size 0x%llx\n", s,
-				(unsigned long long)mcfg->memseg[s].len);
+				(uint64_t)mcfg->memseg[s].len);
 		s++;
 	}
 	/* unmap the hugepage config file, since we are done using it */

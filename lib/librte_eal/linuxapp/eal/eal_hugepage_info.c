@@ -107,7 +107,7 @@ get_default_hp_size(void)
 	const char str_hugepagesz[] = "Hugepagesize:";
 	unsigned hugepagesz_len = sizeof(str_hugepagesz) - 1;
 	char buffer[256];
-	unsigned long long size = 0;
+	uint64_t size = 0;
 
 	FILE *fd = fopen(proc_meminfo, "r");
 	if (fd == NULL)

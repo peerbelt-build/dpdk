@@ -456,14 +456,14 @@ int t4_wr_mbox_meat_timeout(struct adapter *adap, int mbox,
 	if (ctl & F_MBMSGVALID) {
 		dev_err(adap, "found VALID command in mbox %u: "
 			"%llx %llx %llx %llx %llx %llx %llx %llx\n", mbox,
-			(unsigned long long)t4_read_reg64(adap, data_reg),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 8),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 16),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 24),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 32),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 40),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 48),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 56));
+			(uint64_t)t4_read_reg64(adap, data_reg),
+			(uint64_t)t4_read_reg64(adap, data_reg + 8),
+			(uint64_t)t4_read_reg64(adap, data_reg + 16),
+			(uint64_t)t4_read_reg64(adap, data_reg + 24),
+			(uint64_t)t4_read_reg64(adap, data_reg + 32),
+			(uint64_t)t4_read_reg64(adap, data_reg + 40),
+			(uint64_t)t4_read_reg64(adap, data_reg + 48),
+			(uint64_t)t4_read_reg64(adap, data_reg + 56));
 	}
 
 	/*
@@ -474,14 +474,14 @@ int t4_wr_mbox_meat_timeout(struct adapter *adap, int mbox,
 
 	CXGBE_DEBUG_MBOX(adap, "%s: mbox %u: %016llx %016llx %016llx %016llx "
 			"%016llx %016llx %016llx %016llx\n", __func__,  (mbox),
-			(unsigned long long)t4_read_reg64(adap, data_reg),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 8),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 16),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 24),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 32),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 40),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 48),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 56));
+			(uint64_t)t4_read_reg64(adap, data_reg),
+			(uint64_t)t4_read_reg64(adap, data_reg + 8),
+			(uint64_t)t4_read_reg64(adap, data_reg + 16),
+			(uint64_t)t4_read_reg64(adap, data_reg + 24),
+			(uint64_t)t4_read_reg64(adap, data_reg + 32),
+			(uint64_t)t4_read_reg64(adap, data_reg + 40),
+			(uint64_t)t4_read_reg64(adap, data_reg + 48),
+			(uint64_t)t4_read_reg64(adap, data_reg + 56));
 
 	t4_write_reg(adap, ctl_reg, F_MBMSGVALID | V_MBOWNER(X_MBOWNER_FW));
 	t4_read_reg(adap, ctl_reg);          /* flush write */
@@ -518,14 +518,14 @@ int t4_wr_mbox_meat_timeout(struct adapter *adap, int mbox,
 			CXGBE_DEBUG_MBOX(adap,
 			"%s: mbox %u: %016llx %016llx %016llx %016llx "
 			"%016llx %016llx %016llx %016llx\n", __func__,  (mbox),
-			(unsigned long long)t4_read_reg64(adap, data_reg),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 8),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 16),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 24),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 32),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 40),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 48),
-			(unsigned long long)t4_read_reg64(adap, data_reg + 56));
+			(uint64_t)t4_read_reg64(adap, data_reg),
+			(uint64_t)t4_read_reg64(adap, data_reg + 8),
+			(uint64_t)t4_read_reg64(adap, data_reg + 16),
+			(uint64_t)t4_read_reg64(adap, data_reg + 24),
+			(uint64_t)t4_read_reg64(adap, data_reg + 32),
+			(uint64_t)t4_read_reg64(adap, data_reg + 40),
+			(uint64_t)t4_read_reg64(adap, data_reg + 48),
+			(uint64_t)t4_read_reg64(adap, data_reg + 56));
 
 			CXGBE_DEBUG_MBOX(adap,
 				"command %#x completed in %d ms (%ssleeping)\n",

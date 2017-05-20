@@ -146,7 +146,7 @@ static char * number(char * buf, char * end, long long num, int base, int size, 
 int _kc_vsnprintf(char *buf, size_t size, const char *fmt, va_list args)
 {
 	int len;
-	unsigned long long num;
+	uint64_t num;
 	int i, base;
 	char *str, *end, c;
 	const char *s;
@@ -855,7 +855,7 @@ static void _kc_hex_dump_to_buffer(const void *buf, size_t len, int rowsize,
 		for (j = 0; j < ngroups; j++)
 			lx += scnprintf((char *)(linebuf + lx), linebuflen - lx,
 				"%s%16.16llx", j ? " " : "",
-				(unsigned long long)*(ptr8 + j));
+				(uint64_t)*(ptr8 + j));
 		ascii_column = 17 * ngroups + 2;
 		break;
 	}

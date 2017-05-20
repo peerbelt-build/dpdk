@@ -163,8 +163,8 @@ do_stats_display(void)
 	printf("\nCLIENTS\n");
 	printf("-------\n");
 	for (i = 0; i < num_clients; i++){
-		const unsigned long long rx = clients[i].stats.rx;
-		const unsigned long long rx_drop = clients[i].stats.rx_drop;
+		const uint64_t rx = clients[i].stats.rx;
+		const uint64_t rx_drop = clients[i].stats.rx_drop;
 		printf("Client %2u - rx: %9llu, rx_drop: %9llu\n"
 				"            tx: %9"PRIu64", tx_drop: %9"PRIu64"\n",
 				i, rx, rx_drop, client_tx[i], client_tx_drop[i]);

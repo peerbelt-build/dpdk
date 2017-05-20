@@ -406,7 +406,7 @@ static inline u64 t4_read_reg64(struct adapter *adapter, u32 reg_addr)
 	u64 val = CXGBE_READ_REG64(adapter, reg_addr);
 
 	CXGBE_DEBUG_REG(adapter, "64-bit read register %#x value %#llx\n",
-			reg_addr, (unsigned long long)val);
+			reg_addr, (uint64_t)val);
 	return val;
 }
 
@@ -422,7 +422,7 @@ static inline void t4_write_reg64(struct adapter *adapter, u32 reg_addr,
 				  u64 val)
 {
 	CXGBE_DEBUG_REG(adapter, "setting register %#x to %#llx\n", reg_addr,
-			(unsigned long long)val);
+			(uint64_t)val);
 
 	CXGBE_WRITE_REG64(adapter, reg_addr, val);
 }

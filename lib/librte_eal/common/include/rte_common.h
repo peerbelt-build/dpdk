@@ -338,7 +338,7 @@ static inline uint64_t
 rte_str_to_size(const char *str)
 {
 	char *endptr;
-	unsigned long long size;
+	uint64_t size;
 
 	while (isspace((int)*str))
 		str++;
